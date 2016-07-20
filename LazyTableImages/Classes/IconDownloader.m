@@ -10,6 +10,7 @@
 
 #import "IconDownloader.h"
 #import "AppRecord.h"
+#import "VCCellRecord.h"
 
 #define kAppIconSize 48
 
@@ -30,8 +31,13 @@
 // -------------------------------------------------------------------------------
 - (void)startDownload
 {
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.appRecord.imageURLString]];
-
+    NSURLRequest *request = nil;
+    if (self.appRecord) {
+        request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.appRecord.imageURLString]];
+    }else{
+        request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.vcPhoto.imageURLString]];
+    }
+    
     // create an session data task to obtain and download the app icon
     _sessionTask = [[NSURLSession sharedSession] dataTaskWithRequest:request
                                                    completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -61,12 +67,21 @@
                 UIGraphicsBeginImageContextWithOptions(itemSize, NO, 0.0f);
                 CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
                 [image drawInRect:imageRect];
-                self.appRecord.appIcon = UIGraphicsGetImageFromCurrentImageContext();
+                if (self.appRecord) {
+                   self.appRecord.appIcon = UIGraphicsGetImageFromCurrentImageContext();
+                }else{
+                   self.vcPhoto.appIcon = UIGraphicsGetImageFromCurrentImageContext();
+                }
+                
                 UIGraphicsEndImageContext();
             }
             else
             {
-                self.appRecord.appIcon = image;
+                if (self.appRecord) {
+                    self.appRecord.appIcon = image;
+                }else{
+                    self.vcPhoto.appIcon = image;
+                }
             }
             
             // call our completion handler to tell our client that our icon is ready for display

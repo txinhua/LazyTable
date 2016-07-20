@@ -19,6 +19,7 @@
 		53AF510F1B726BEC00B5860E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53AF510E1B726BEC00B5860E /* Images.xcassets */; };
 		53AF51141B726BF900B5860E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53AF51101B726BF900B5860E /* Launch Screen.storyboard */; };
 		53AF51151B726BF900B5860E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53AF51121B726BF900B5860E /* MainStoryboard.storyboard */; };
+		D03AB5DA1D3F4FF400CD4DBF /* VCCellRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D03AB5D91D3F4FF400CD4DBF /* VCCellRecord.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		53AF51111B726BF900B5860E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = "LazyTableImages/en.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		53AF51131B726BF900B5860E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = LazyTableImages/en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		53AF51161B726BFD00B5860E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = LazyTableImages/Info.plist; sourceTree = "<group>"; };
+		D03AB5D81D3F4FF400CD4DBF /* VCCellRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCCellRecord.h; path = LazyTableImages/Classes/VCCellRecord.h; sourceTree = SOURCE_ROOT; };
+		D03AB5D91D3F4FF400CD4DBF /* VCCellRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCCellRecord.m; path = LazyTableImages/Classes/VCCellRecord.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				53AF51051B726BB600B5860E /* RootViewController.m */,
 				53AF51021B726BB600B5860E /* ParseOperation.h */,
 				53AF51031B726BB600B5860E /* ParseOperation.m */,
+				D03AB5D81D3F4FF400CD4DBF /* VCCellRecord.h */,
+				D03AB5D91D3F4FF400CD4DBF /* VCCellRecord.m */,
 				53AF50FC1B726BB600B5860E /* AppRecord.h */,
 				53AF50FD1B726BB600B5860E /* AppRecord.m */,
 				53AF50FE1B726BB600B5860E /* IconDownloader.h */,
@@ -200,6 +205,7 @@
 			files = (
 				53AF51061B726BB600B5860E /* AppRecord.m in Sources */,
 				53AF51071B726BB600B5860E /* IconDownloader.m in Sources */,
+				D03AB5DA1D3F4FF400CD4DBF /* VCCellRecord.m in Sources */,
 				53AF51091B726BB600B5860E /* ParseOperation.m in Sources */,
 				53AF510A1B726BB600B5860E /* RootViewController.m in Sources */,
 				53AF510D1B726BE100B5860E /* main.m in Sources */,

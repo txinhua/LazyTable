@@ -15,4 +15,5 @@
 @property (nonatomic, strong) NSString *imageURLString;
 @property (nonatomic, strong) NSString *appURLString;
 
+
 @end

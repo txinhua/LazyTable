@@ -9,10 +9,11 @@
  */
 
 @class AppRecord;
-
+@class VCPhoto;
 @interface IconDownloader : NSObject
 
 @property (nonatomic, strong) AppRecord *appRecord;
+@property (nonatomic, strong) VCPhoto *vcPhoto;
 @property (nonatomic, copy) void (^completionHandler)(void);
 
 - (void)startDownload;

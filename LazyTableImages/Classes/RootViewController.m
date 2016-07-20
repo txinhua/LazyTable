@@ -20,6 +20,7 @@
 #import "RootViewController.h"
 #import "AppRecord.h"
 #import "IconDownloader.h"
+#import "VCCellRecord.h"
 
 #define kCustomRowCount 7
 
@@ -155,6 +156,14 @@ static NSString *PlaceholderCellIdentifier = @"PlaceholderCell";
 #pragma mark - Table cell image support
 
 // -------------------------------------------------------------------------------
+//	startPhotosDownload:forIndexPath:
+// -------------------------------------------------------------------------------
+- (void)startPhotosDownload:(VCCellRecord *)appRecord forIndexPath:(NSIndexPath *)indexPath
+{
+
+}
+
+// -------------------------------------------------------------------------------
 //	startIconDownload:forIndexPath:
 // -------------------------------------------------------------------------------
 - (void)startIconDownload:(AppRecord *)appRecord forIndexPath:(NSIndexPath *)indexPath
@@ -179,6 +188,7 @@ static NSString *PlaceholderCellIdentifier = @"PlaceholderCell";
         (self.imageDownloadsInProgress)[indexPath] = iconDownloader;
         [iconDownloader startDownload];  
     }
+    
 }
 
 // -------------------------------------------------------------------------------
